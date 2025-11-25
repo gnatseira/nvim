@@ -62,7 +62,7 @@ local custom_attach = function(client, bufnr)
 end
 
 if M.executable('clangd') then
-    nvim_lsp.clangd.setup({
+    vim.lsp.config("clangd", {
         on_attach = custom_attach,
         args = {
             '--background-index',
@@ -76,7 +76,7 @@ else
 end
 
 if M.executable('lua-language-server') then
-    nvim_lsp.lua_ls.setup({
+    vim.lsp.config("lua_ls", {
         on_attach = custom_attach,
         settings = {
             Lua = {
@@ -104,7 +104,7 @@ else
 end
 
 if M.executable('pylsp') then
-    nvim_lsp.pylsp.setup({
+    vim.lsp.config("pylsp", {
         on_attach = custom_attach,
     })
 else
