@@ -113,20 +113,20 @@ return require('packer').startup({function(use)
         config = [[require('config.treesitter')]]
     }
 
-    use {
-        'p00f/nvim-ts-rainbow',
-        opt = true,
-        after = 'nvim-treesitter',
-    }
+    --use {
+    --   'p00f/nvim-ts-rainbow',
+    --  opt = true,
+    --  after = 'nvim-treesitter',
+    --}
 
     use {'JoosepAlviste/nvim-ts-context-commentstring', opt = true, after = 'nvim-treesitter'}
 
-    use {
-        'andymass/vim-matchup',
-        opt = true,
-        after = 'nvim-treesitter',
-        config = [[require('config.matchup')]]
-    }
+    --use {
+    --   'andymass/vim-matchup',
+    --  opt = true,
+    --  after = 'nvim-treesitter',
+    --  config = [[require('config.matchup')]]
+    --}
 
     -- mason
     use {'williamboman/mason.nvim'}
